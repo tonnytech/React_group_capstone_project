@@ -18,11 +18,12 @@ const Mission = () => {
 
   return (
     <>
+      <div className="wrapper">
         <div className= "container">
           <div className="heading">
-            <div className="col">category ID</div>
-            <div className="col">category </div>
-            <div className="col">category ID</div>
+            <div className="col">Mission</div>
+            <div className="col">Description </div>
+            <div className="col">Status</div>
             <div className="col"> </div>
           </div>
             {dataFromAPI.map((data)=> (
@@ -33,7 +34,8 @@ const Mission = () => {
                 <div className="col"> <button>Join Mission</button></div>
             </div>
             ))}
-        </div>           
+        </div>
+      </div>         
         </>
   );
 };
