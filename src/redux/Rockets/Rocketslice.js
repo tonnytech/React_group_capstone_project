@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -27,6 +28,20 @@ const RocketDataSlice = createSlice({
       const newState = state;
       newState.books = [...state.books, action.payload];
     },
+    rocketreserve: (state, action) => {
+      return {
+        ...state,
+        MissionData: state.MissionData.map((rocket) => {
+          if (rocket.rocket_id === action.payload) {
+            return {
+              ...rocket,
+              reserved: !rocket.reserved,
+            };
+          }
+          return rocket;
+        }),
+      };
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -48,6 +63,7 @@ const RocketDataSlice = createSlice({
             flickr_images: data.flickr_images[0],
             rocket_name: data.rocket_name,
             rocket_type: data.rocket_type,
+            reserved: false,
           });
           return newArray;
         });
@@ -64,5 +80,5 @@ const RocketDataSlice = createSlice({
       });
   },
 });
-export const { updateData } = RocketDataSlice.actions;
+export const { updateData, rocketreserve } = RocketDataSlice.actions;
 export default RocketDataSlice.reducer;
