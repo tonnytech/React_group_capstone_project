@@ -1,0 +1,22 @@
+.rockets {
+  display: flex;
+  padding: 30px;
+}
+
+.rockets img {
+  width: 200px;
+}
+
+.rockets-children {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 20px;
+}
+
+.rockets-children button {
+  width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #007bff;
+}
