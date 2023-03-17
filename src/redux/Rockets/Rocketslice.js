@@ -17,7 +17,7 @@ export const fetchRocketData = createAsyncThunk(
   },
 );
 const initialState = {
-  MissionData: [],
+  RocketData: [],
   isLoading: false,
 };
 const RocketDataSlice = createSlice({
@@ -31,7 +31,7 @@ const RocketDataSlice = createSlice({
     rocketreserve: (state, action) => {
       return {
         ...state,
-        MissionData: state.MissionData.map((rocket) => {
+        RocketData: state.RocketData.map((rocket) => {
           if (rocket.rocket_id === action.payload) {
             return {
               ...rocket,
@@ -67,7 +67,7 @@ const RocketDataSlice = createSlice({
           });
           return newArray;
         });
-        newState.MissionData = newArray;
+        newState.RocketData = newArray;
         return newState;
       })
       .addCase(fetchRocketData.rejected, (state, action) => {

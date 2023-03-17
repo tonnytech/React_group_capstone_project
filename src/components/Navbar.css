@@ -37,3 +37,7 @@ ul img {
   display: flex;
   justify-content: space-evenly;
 }
+
+.active {
+  text-decoration: underline;
+}

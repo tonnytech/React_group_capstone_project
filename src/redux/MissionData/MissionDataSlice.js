@@ -58,6 +58,7 @@ const MissionDataSlice = createSlice({
             mission_id: data.mission_id,
             mission_name: data.mission_name,
             description: data.description,
+            reserved: false,
           })
         })
         newState.MissionData = newArray;

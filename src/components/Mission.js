@@ -9,10 +9,6 @@ const Mission = () => {
   const dispatch = useDispatch();
   const { MissionData } = useSelector((state) => state.Missions);
 
-  useEffect(() => {
-    dispatch(fetchData());
-  }, [dispatch]);
-
   const [isActive, setActive] = useState("true");
 
   const ToggleClass = () => {
@@ -20,8 +16,8 @@ const Mission = () => {
   };
 
   const dataFromAPI = MissionData;
-  const membershipHandler = (id) => {
-    dispatch(reserveMission(id));
+  const membershipHandler = (mission_id) => {
+    dispatch(reserveMission(mission_id));
     ToggleClass();
   };
 
@@ -41,8 +37,8 @@ const Mission = () => {
               <div className="col"> {data.description}</div>
               <div className="col">
                 {" "}
-                <span className={isActive ? "ActiveMembership" : "Membership"}>
-                  {data.reserved ? "Not A Member" : "reserved"}
+                <span className={data.reserved ? "ActiveMembership" : "Membership"}>
+                  {data.reserved ? "reserved" : "Not a member"}
                 </span>
               </div>
               <div className="col">
@@ -52,7 +48,7 @@ const Mission = () => {
                     className="joinMissionButton"
                     onClick={() => membershipHandler(data.mission_id)}
                   >
-                    Join Mission
+                    Leave mission
                   </button>
                 )}{" "}
                 {!data.reserved && (
@@ -60,7 +56,7 @@ const Mission = () => {
                     className="cancelMissionButton"
                     onClick={() => membershipHandler(data.mission_id)}
                   >
-                    Leave Mission
+                    Join Mission
                   </button>
                 )}
               </div>
