@@ -27,9 +27,19 @@ const MissionDataSlice = createSlice({
   name: 'MissionData',
   initialState,
   reducers: {
-    updateData: (state, action) => {
-      const newState = state;
-      newState.books = [...state.books, action.payload];
+    reserveMission: (state, action) => {
+      return {
+        ...state,
+        MissionData: state.MissionData.map((mission) => {
+          if (mission.mission_id === action.payload) {
+            return {
+              ...mission,
+              reserved: !mission.reserved,
+            };
+          }
+          return mission;
+        }),
+      };
     },
   },
   extraReducers: (builder) => {
@@ -42,8 +52,7 @@ const MissionDataSlice = createSlice({
         const newState = { ...state, isLoading: false };
         const responseObject = action.payload;
         const res = responseObject.data;
-        let newArray = [];
-        let dataObject = {};
+        const newArray = [];
         res.map((data)=> {
           newArray.push ({
             mission_id: data.mission_id,
@@ -62,6 +71,6 @@ const MissionDataSlice = createSlice({
 
 });
 
-export const { updateData } = MissionDataSlice.actions;
+export const { reserveMission } = MissionDataSlice.actions;
 
 export default MissionDataSlice.reducer;
