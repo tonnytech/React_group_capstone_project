@@ -6,8 +6,12 @@
 
 .container {
   display: table;
-  width: 90%;
+  width: 70%;
   border-collapse: collapse;
+}
+
+.ActiveContainer {
+
 }
 
 .heading {
@@ -29,3 +33,27 @@
   display: table-cell;
   border: 1px solid #ccc;
 }
+
+.ActiveMembership {
+  background-color: grey;
+}
+
+.Membership {
+  background-color: blue;
+  width: 100%;
+  border: none;
+}
+
+.joinMissionButton {
+  background-color: #fff;
+  color: grey;
+  border-color: grey
+}
+
+.cancelMissionButton {
+  background-color: #fff;
+  color: red;
+  border-color: red;
+}
+
+
