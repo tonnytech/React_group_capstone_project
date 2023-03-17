@@ -10,10 +10,6 @@
   border-collapse: collapse;
 }
 
-.ActiveContainer {
-
-}
-
 .heading {
   font-weight: bold;
   display: table-row;
@@ -47,7 +43,7 @@
 .joinMissionButton {
   background-color: #fff;
   color: grey;
-  border-color: grey
+  border-color: grey;
 }
 
 .cancelMissionButton {
@@ -55,5 +51,3 @@
   color: red;
   border-color: red;
 }
-
-
