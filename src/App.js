@@ -5,10 +5,19 @@ import Navbar from './components/Navbar';
 import MyProfile from './components/MyProfile';
 import Mission from './components/Mission';
 import Rockets from './components/Rockets';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchRocketData } from './redux/Rockets/Rocketslice';
+import { fetchData } from './redux/MissionData/MissionDataSlice';
 
 function App() {
-  
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchRocketData());
+  }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
   return (
     <>
       <Navbar />
