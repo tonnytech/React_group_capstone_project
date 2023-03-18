@@ -1,8 +1,4 @@
-<a name="readme-top"></a>
-
-<div align="center">
- 
-  <h3><b>Math Magicians</b></h3>
+# Space Travelers' Hub
 
 </div>
 
@@ -27,47 +23,39 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
+# 📖 [Space Travelers' Hub] <a name="react"></a>
 
-# 📖 Math Magicians <a name="about-project"></a>
+> **Space Travelers' Hub is a web application for a company that provides commercial and scientific space travel services.**
 
-**Math Magicians** is a Single Page Application developed using React and Redux. We use the `create-react-app` build tool for development. The core component of the project is a calculator component that allows users to perform arithmetic operations.
-
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="built-with">HTML, CSS, JavaScript, React & redux</a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="">linters</a></li>
+    <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://www.w3schools.com/js/default.asp">JS</a></li>
+    <li><a href="https://github.com">GIT/Github</a></li>
+    <li><a href="https://reactjs.org/docs/create-a-new-react-app.html#create-react-app">React JS</a></li>
   </ul>
 </details>
 
-
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-- **Interactive Calculator**
-- **Math quotes**
+> **[book rockets and join selected space missions.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Link will be added after deployment
-
-<!-- - [Live Demo Link](https://yourdeployedapplicationlink.com) -->
+-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -75,146 +63,104 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need the following installed in your local machine:
+In order to run this project you need:
 
-<ul>
-<li>Node.js</li>
-<li>git</li>
-</ul>
+```sh
+- VSCode or any other IDE.
+- node.js(preferable).
+- browser to deploy.
+- GitHub/Git.
+```
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-Example commands:
-
 ```sh
-  cd <desired-folder>
-  git clone https://github.com/teitonny/Math-Magicians.git
-  cd Math-Magicians
+  cd my-folder
+  git clone https://github.com/tonnytech/React_group_capstone_project
 ```
 
 ### Install
 
 Install this project with:
 
-Example command:
-
 ```sh
-  npm install
+  cd my-project
+  npm init -y
 ```
 
-The above command installs necessary node modules used in the project
+-
 
 ### Usage
 
 To run the project, execute the following command:
 
-Example command:
-
 ```sh
-  npm run start
+  npm install
+  npm start
 ```
-
-The above command opens the project webpage in your browser.
-
-### Run tests
-
-To run tests, run the following command:
-
-
-Example command:
-
-```sh
-npm run test
-```
-
-The above command runs jest test suites in the project
 
 ### Deployment
 
 You can deploy this project using:
 
-Example:
-
 ```sh
-
-npm run build
-
+git and github pages
 ```
 
-The above command produces build files that can be deployed using Github pages or any other hosting service.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Asiriuwa Divine**
+
+- GitHub: [@Divinity-dev](https://github.com/Divinity-dev)
+- LinkedIn: [Divine Asiriuwa](https://www.linkedin.com/in/divinity20/)
 
 👤 **Tonny Tei**
 
-- GitHub: [@teitonny](https://github.com/teitonny)
-- Twitter: [@teitonny](https://twitter.com/teitonny)
+- GitHub: [@Tonnytech](https://github.com/tonnytech)
+- Twitter: [Tonny Tei](https://twitter.com/tonnytei)
+- LinkedIn: [Tonny Tei](https://www.linkedin.com/in/tonny-tei-38a4771a0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Mobile version**
-- **Responsive webpage**
+> **Full application**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/teitonny/math-magician/issues).
+Feel free to check the [issues page](https://github.com/tonnytech/React_group_capstone_project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, please give a Start to the github repo.
+If you like this project, you are welcomed to star and fork it. You can also share your ideas for future features.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
->To be updated at the end of the project
-
-I would like to thank...
+I would like to thank Microverse, and theMealDB who are owners of the API documentation used for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
+## ❓ FAQ <a name="faq"></a>
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-
-- **How to report bugs?**
-
-  - Please raise [github issue](https://github.com/ram1117/math-magicians/issues) with more details about the bug.
-
-- **What is the licensing policy of the project?**
-
-  - The project is MIT licensed, please refer to the License section
+- **[Do you need node installed to run this project?]**
+  - [Yes]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./License.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
