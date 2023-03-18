@@ -2,10 +2,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import axios from 'axios';
 import Rockets from 'src/components/Rockets';
+import axios from 'axios';
 import store from 'src/redux/store';
-import { fetchRocketData, rocketreserve } from 'src/redux/Rockets/Rocketslice';
+import { fetchRocketData, rocketreserve } from '../redux/Rockets/Rocketslice';
 
 it('Rocket page renders rockets and details', () => {
   const tree = renderer

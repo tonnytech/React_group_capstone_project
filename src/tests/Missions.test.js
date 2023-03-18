@@ -4,9 +4,9 @@ import axios from 'axios';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import Mission from 'src/components/Mission';
-import store from 'src/redux/store';
-import { fetchData, reserveMission } from 'src/redux/MissionData/MissionDataSlice';
+import Mission from './components/Mission';
+import store from './redux/store';
+import { fetchData, reserveMission } from '../redux/MissionData/MissionDataSlice';
 
 it('expect Mission page renders correctly', () => {
   const tree = renderer
