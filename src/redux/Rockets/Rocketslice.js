@@ -1,19 +1,13 @@
 /* eslint-disable arrow-body-style */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const baseUrl = 'https://api.spacexdata.com/v3/rockets';
 export const fetchRocketData = createAsyncThunk(
   'RocketData/fetchRocketData',
-  async (_, API) => {
-    try {
-      const response = await axios(baseUrl);
-      return response;
-    } catch (error) {
-      return API.rejectWithValue(
-        error?.data?.message || 'Something went wrong!',
-      );
-    }
+  async () => {
+    const response = await fetch(baseUrl);
+    const data = await response.json();
+    return data;
   },
 );
 const initialState = {
@@ -52,9 +46,7 @@ const RocketDataSlice = createSlice({
       .addCase(fetchRocketData.fulfilled, (state, action) => {
         const newState = { ...state, isLoading: false };
         const responseObject = action.payload;
-        const res = responseObject.data;
-        // console.log(action);
-        // console.log(action.payload);
+        const res = responseObject;
         const newArray = [];
         res.map((data) => {
           newArray.push({

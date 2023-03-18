@@ -18,7 +18,7 @@ const Rocketer = ({ Rocket }) => {
     dispatch(rocketreserve(rocket_id));
   };
   return (
-    <div id={rocket_id} className="rockets">
+    <div id={rocket_id} data-testid="rocketId" className="rockets">
       <img src={flickr_images} alt="" />
       <div className="rockets-children">
         <h3>

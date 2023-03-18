@@ -1,20 +1,13 @@
-/* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const baseUrl = 'https://api.spacexdata.com/v3/missions';
 
 export const fetchData = createAsyncThunk(
   'MissionData/fetchMission',
-  async (_, API) => {
-    try {
-      const response = await axios(baseUrl);
-      return response;
-    } catch (error) {
-      return API.rejectWithValue(
-        error?.data?.message || 'Something went wrong!',
-      );
-    }
+  async () => {
+    const response = await fetch(baseUrl);
+    const data = await response.json();
+    return data;
   },
 );
 
@@ -27,20 +20,18 @@ const MissionDataSlice = createSlice({
   name: 'MissionData',
   initialState,
   reducers: {
-    reserveMission: (state, action) => {
-      return {
-        ...state,
-        MissionData: state.MissionData.map((mission) => {
-          if (mission.mission_id === action.payload) {
-            return {
-              ...mission,
-              reserved: !mission.reserved,
-            };
-          }
-          return mission;
-        }),
-      };
-    },
+    reserveMission: (state, action) => ({
+      ...state,
+      MissionData: state.MissionData.map((mission) => {
+        if (mission.mission_id === action.payload) {
+          return {
+            ...mission,
+            reserved: !mission.reserved,
+          };
+        }
+        return mission;
+      }),
+    }),
   },
   extraReducers: (builder) => {
     builder
@@ -51,25 +42,28 @@ const MissionDataSlice = createSlice({
       .addCase(fetchData.fulfilled, (state, action) => {
         const newState = { ...state, isLoading: false };
         const responseObject = action.payload;
-        const res = responseObject.data;
+        const res = responseObject;
         const newArray = [];
-        res.map((data)=> {
-          newArray.push ({
+        res.forEach((data) => (
+          newArray.push({
             mission_id: data.mission_id,
             mission_name: data.mission_name,
             description: data.description,
             reserved: false,
           })
-        })
+        ));
         newState.MissionData = newArray;
         return newState;
       })
       .addCase(fetchData.rejected, (state, action) => {
-        const newState = { ...state, state: 'failed', error: action.error.message };
+        const newState = {
+          ...state,
+          state: 'failed',
+          error: action.error.message,
+        };
         return newState;
       });
   },
-
 });
 
 export const { reserveMission } = MissionDataSlice.actions;
