@@ -66,16 +66,4 @@ describe('is Profile having reserve titles ', () => {
     const ProfileContainer = screen.getByTestId('profileContainer');
     expect(ProfileContainer).toBeInTheDocument();
   });
-
-  //   test("Reserved missions  and Rockets should render", () => {
-  //     render(
-  //       <Provider store={store}>
-  //         <MyProfile />
-  //       </Provider>
-  //     );
-
-//     const ProfileContainer = screen.getAllByRole("heading");
-//     // two title headers
-//     expect(ProfileContainer.length).toBe(7);
-//   });
 });

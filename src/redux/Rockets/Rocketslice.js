@@ -1,4 +1,3 @@
-/* eslint-disable arrow-body-style */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const baseUrl = 'https://api.spacexdata.com/v3/rockets';
@@ -22,20 +21,18 @@ const RocketDataSlice = createSlice({
       const newState = state;
       newState.books = [...state.books, action.payload];
     },
-    rocketreserve: (state, action) => {
-      return {
-        ...state,
-        RocketData: state.RocketData.map((rocket) => {
-          if (rocket.rocket_id === action.payload) {
-            return {
-              ...rocket,
-              reserved: !rocket.reserved,
-            };
-          }
-          return rocket;
-        }),
-      };
-    },
+    rocketreserve: (state, action) => ({
+      ...state,
+      RocketData: state.RocketData.map((rocket) => {
+        if (rocket.rocket_id === action.payload) {
+          return {
+            ...rocket,
+            reserved: !rocket.reserved,
+          };
+        }
+        return rocket;
+      }),
+    }),
   },
   extraReducers: (builder) => {
     builder

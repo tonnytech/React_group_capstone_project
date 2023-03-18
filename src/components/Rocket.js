@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable camelcase */
 import './Rockets.css';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -43,7 +41,7 @@ Rocketer.propTypes = {
     rocket_name: PropTypes.string,
     description: PropTypes.string,
     flickr_images: PropTypes.string,
-    reserved: PropTypes.string,
+    reserved: PropTypes.bool,
   }).isRequired,
 };
 
