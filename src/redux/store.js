@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { configureStore } from '@reduxjs/toolkit';
 import missionReducer from './MissionData/MissionDataSlice';
 import rocketReducer from './Rockets/Rocketslice';

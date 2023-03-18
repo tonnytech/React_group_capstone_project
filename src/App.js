@@ -1,12 +1,11 @@
-/* eslint-disable */
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Navbar from './components/Navbar';
 import MyProfile from './components/MyProfile';
 import Mission from './components/Mission';
 import Rockets from './components/Rockets';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { fetchRocketData } from './redux/Rockets/Rocketslice';
 import { fetchData } from './redux/MissionData/MissionDataSlice';
 
@@ -22,6 +21,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Rockets />} />
         <Route path="/Rockets" element={<Rockets />} />
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/missions" element={<Mission />} />
