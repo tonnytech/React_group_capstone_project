@@ -1,0 +1,35 @@
+.rockets {
+  display: flex;
+  padding: 30px;
+}
+
+.rockets img {
+  width: 200px;
+}
+
+.rockets-children {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 20px;
+}
+
+.btn {
+  width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #007bff;
+}
+
+.btn2 {
+  background-color: #fff;
+  color: #007bff;
+}
+
+span {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  margin-right: 10px;
+}
