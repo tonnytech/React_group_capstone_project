@@ -51,6 +51,10 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Live preview
+
+[Live preview](https://tonnytech.github.io/React_group_capstone_project/)
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
